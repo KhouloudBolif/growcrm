@@ -160,6 +160,16 @@
                 @endif
                 @lang('lang.reminders')
             </div>
+
+             <!--package_module_timetracking-->
+             <div class="price-row">
+                @if($package->package_module_geolocation == 'yes')
+                <i class="sl-icon-check text-success"></i>
+                @else
+                <i class="sl-icon-close text-danger"></i>
+                @endif
+                @lang('lang.geolocation')
+            </div>
         </div>
 
         <!--LANDLORD BUTTONS-->

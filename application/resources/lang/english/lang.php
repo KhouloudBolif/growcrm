@@ -2771,5 +2771,6 @@ return [
     'foo' => "bar",
     'foo' => "bar",
     'foo' => "bar",
+    'geolocation' => "Geolocation" ,
 
 ];

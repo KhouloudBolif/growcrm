@@ -285,6 +285,17 @@
                     <span class="custom-control-description">@lang('lang.reminders')</span>
                 </label>
             </div>
+
+             <!--geolocation-->
+             <div class="col-sm-12 col-lg-4 m-b-10">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" name="package_module_geolocation" class="custom-control-input"
+                        {{ runtimePrechecked($package->package_module_geolocation ?? '') }}>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">@lang('lang.geolocation')</span>
+                </label>
+            </div>
+
         </div>
     </div>
 </div>

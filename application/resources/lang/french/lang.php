@@ -1656,6 +1656,7 @@ return [
 'module' => "Module",
 'time_tracking' => "Suivi du temps",
 'reminders' => "Rappels",
+'geolocation' => "Géolocalisation", 
 'app_modules' => "Modules d'application",
 'only_system_enabled_modules_enabled' => "Seuls les modules activés par le système sont affichés",
 'use_system_settings' => "Utiliser les paramètres système",

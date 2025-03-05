@@ -161,6 +161,16 @@
                 <?php endif; ?>
                 <?php echo app('translator')->get('lang.reminders'); ?>
             </div>
+
+             <!--package_module_timetracking-->
+             <div class="price-row">
+                <?php if($package->package_module_geolocation == 'yes'): ?>
+                <i class="sl-icon-check text-success"></i>
+                <?php else: ?>
+                <i class="sl-icon-close text-danger"></i>
+                <?php endif; ?>
+                <?php echo app('translator')->get('lang.geolocation'); ?>
+            </div>
         </div>
 
         <!--LANDLORD BUTTONS-->

@@ -125,6 +125,8 @@ class Packages extends Controller {
         $package->package_module_proposals = (request('package_module_proposals') == 'on') ? 'yes' : 'no';
         $package->package_module_contracts = (request('package_module_contracts') == 'on') ? 'yes' : 'no';
         $package->package_module_messages = (request('package_module_messages') == 'on') ? 'yes' : 'no';
+        $package->package_module_geolocation= (request('package_module_geolocation') == 'on') ? 'yes' : 'no';
+        
         //default module
         $package->package_module_projects = 'yes';
         $package->save();
@@ -229,6 +231,7 @@ class Packages extends Controller {
         $package->package_module_proposals = (request('package_module_proposals') == 'on') ? 'yes' : 'no';
         $package->package_module_contracts = (request('package_module_contracts') == 'on') ? 'yes' : 'no';
         $package->package_module_messages = (request('package_module_messages') == 'on') ? 'yes' : 'no';
+        $package->package_module_geolocation = (request('package_module_geolocation') == 'on') ? 'yes' : 'no';
         $package->package_sync_status = 'awaiting-sync';
         $package->save();
 

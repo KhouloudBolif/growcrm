@@ -285,6 +285,17 @@
                     <span class="custom-control-description"><?php echo app('translator')->get('lang.reminders'); ?></span>
                 </label>
             </div>
+
+             <!--geolocation-->
+             <div class="col-sm-12 col-lg-4 m-b-10">
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" name="package_module_geolocation" class="custom-control-input"
+                        <?php echo e(runtimePrechecked($package->package_module_geolocation ?? '')); ?>>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description"><?php echo app('translator')->get('lang.geolocation'); ?></span>
+                </label>
+            </div>
+
         </div>
     </div>
 </div><?php /**PATH C:\xampp\htdocs\application\resources\views/landlord/packages/modal/add-edit-inc.blade.php ENDPATH**/ ?>
