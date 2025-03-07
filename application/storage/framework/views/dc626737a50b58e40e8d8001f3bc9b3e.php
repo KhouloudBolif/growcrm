@@ -1,4 +1,5 @@
  <?php $__env->startSection('content'); ?>
+
 <!-- main content -->
 <div class="container-fluid">
 

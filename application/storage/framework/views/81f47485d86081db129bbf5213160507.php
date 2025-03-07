@@ -660,7 +660,7 @@
                         </li>
                     </ul>
                 </li>
-
+ 
 
                 <!--Other-->
                 <?php if(config('system.settings_type') == 'standalone'): ?>

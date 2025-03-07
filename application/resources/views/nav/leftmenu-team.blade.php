@@ -9,7 +9,7 @@
             <ul id="sidebarnav" data-modular-id="main_menu_team">
 
 
-
+               
                 <!--home-->
                 @if(auth()->user()->role->role_homepage == 'dashboard')
                 <li data-modular-id="main_menu_team_home"
@@ -367,6 +367,40 @@
                     </a>
                 </li>
                 @endif
+             
+                
+                 <!--geolocation-->
+                 @if(config('system.settings_modules_geolocation') == 'enabled')
+              <li data-modular-id="main_menu_team_geolocation"
+              class="sidenav-menu-item  {{  $page['mainmenu_vehicle'] ?? ''  ?: $page['mainmenu_subscription'] ?? '' ?: $page['mainmenu_intervention'] ?? '' 
+    }}">
+              <!--multiple menu-->
+              <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false">
+                  <i class="sl-icon-location-pin"></i>
+                  <span class="hide-menu">{{ cleanLang(__('lang.geolocation')) }}
+                  </span>
+              </a>
+              <ul aria-expanded="false" class="collapse">
+                <li class="sidenav-submenu {{ $page['submenu_vehicle'] ?? '' }}" id="submenu_vehicle">
+
+                      <a href="{{ _url('/geolocation/vehicles') }}"
+                          class="{{ $page['submenu_vehicle'] ?? '' }}">{{ cleanLang(__('lang.vehicle')) }}</a>
+                  </li>
+                  <li class="sidenav-submenu {{ $page['submenu_subscription'] ?? '' }}"
+                      id="submenu_subscription">
+                      <a href="{{ _url('/geolocation/subscriptions') }}"
+                          class="{{ $page['submenu_subscription'] ?? '' }}">{{ cleanLang(__('lang.subscription')) }}</a>
+                  </li>
+                  <li class="sidenav-submenu {{ $page['submenu_intervention'] ?? '' }}"
+                  id="submenu_intervention">
+                  <a href="{{ _url('/geolocation/interventions') }}"
+                      class="{{ $page['submenu_intervention'] ?? '' }}">{{ cleanLang(__('lang.intervention')) }}</a>
+              </li>
+              </ul>
+          </li>
+                 @endif
+
+
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

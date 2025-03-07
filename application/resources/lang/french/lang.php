@@ -2705,6 +2705,9 @@ return [
 'billed' => "Facturé",
 'unbilled' => "Non facturé",
 'no_of_tasks' => "Nombre de tâches",
+'vehicle' => "Véhicule" ,
+'subscription' => "Abonnement" ,
+'intervention' => "Intervention" ,
 
 
 ];

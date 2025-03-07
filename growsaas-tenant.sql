@@ -2303,6 +2303,8 @@ CREATE TABLE `settings` (
   `settings_modules_subscriptions` varchar(10) DEFAULT 'enabled' COMMENT 'enabled|disabled',
   `settings_modules_contracts` varchar(10) DEFAULT 'enabled' COMMENT 'enabled|disabled',
   `settings_modules_proposals` varchar(10) DEFAULT 'enabled' COMMENT 'enabled|disabled',
+  `settings_modules_geolocation` varchar(10) DEFAULT 'enabled' COMMENT 'enabled|disabled',
+
   `settings_modules_tickets` varchar(10) DEFAULT 'enabled' COMMENT 'enabled|disabled',
   `settings_modules_timetracking` varchar(10) DEFAULT 'enabled' COMMENT 'enabled|disabled',
   `settings_modules_reminders` varchar(10) DEFAULT 'enabled' COMMENT 'enabled|disabled',

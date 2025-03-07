@@ -47,10 +47,12 @@ class CreateTenantRepository {
         if (!$this->configureDB($customer, $package, $auth_key)) {
             return false;
         }
+        
 
         //return new database information
         return true;
-
+        
+        
     }
 
     /**
@@ -146,6 +148,8 @@ class CreateTenantRepository {
                         'settings_modules_proposals' => ($package->package_module_proposals == 'yes') ? 'enabled' : 'disabled',
                         'settings_modules_contracts' => ($package->package_module_contracts == 'yes') ? 'enabled' : 'disabled',
                         'settings_modules_messages' => ($package->package_module_messages == 'yes') ? 'enabled' : 'disabled',
+                        'settings_modules_geolocation' => ($package->package_module_geolocation == 'yes') ? 'enabled' : 'disabled',
+
 
                         //defaults
                         'settings_system_language_default' => $defaults->defaults_language_default,

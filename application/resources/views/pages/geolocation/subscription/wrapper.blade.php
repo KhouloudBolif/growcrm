@@ -1,4 +1,6 @@
 @extends('layout.wrapper') @section('content')
+
+
 <!-- main content -->
 <div class="container-fluid">
 
@@ -8,28 +10,26 @@
         <!-- Page Title & Bread Crumbs -->
         @include('misc.heading-crumbs')
         <!--Page Title & Bread Crumbs -->
-        <script>
-            console.log("page templetes" , @json($page))
-        </script>
 
 
-        <!-- action buttons -->
-        @include('pages.templates.proposals.components.misc.list-page-actions')
-        <!-- action buttons -->
+       
 
     </div>
     <!--page heading-->
 
+   
+    <!--stats panel-->
 
     <!-- page content -->
     <div class="row">
         <div class="col-12">
             <!--proposals table-->
-            @include('pages.templates.proposals.components.table.wrapper')
+          heloo
             <!--proposals table-->
         </div>
     </div>
     <!--page content -->
+
 </div>
 <!--main content -->
 @endsection

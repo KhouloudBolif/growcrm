@@ -2772,5 +2772,8 @@ return [
     'foo' => "bar",
     'foo' => "bar",
     'geolocation' => "Geolocation" ,
+    'vehicle' => "Vehicle" ,
+    'subscription' => "Subscription" ,
+    'intervention' => "Intervention",
 
 ];

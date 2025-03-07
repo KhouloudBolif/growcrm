@@ -628,7 +628,7 @@
                         </li>
                     </ul>
                 </li>
-
+ 
 
                 <!--Other-->
                 @if(config('system.settings_type') == 'standalone')

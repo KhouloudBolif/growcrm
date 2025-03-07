@@ -9,7 +9,7 @@
             <ul id="sidebarnav" data-modular-id="main_menu_team">
 
 
-
+               
                 <!--home-->
                 <?php if(auth()->user()->role->role_homepage == 'dashboard'): ?>
                 <li data-modular-id="main_menu_team_home"
@@ -382,6 +382,40 @@
                     </a>
                 </li>
                 <?php endif; ?>
+             
+                
+                 <!--geolocation-->
+                 <?php if(config('system.settings_modules_geolocation') == 'enabled'): ?>
+              <li data-modular-id="main_menu_team_geolocation"
+              class="sidenav-menu-item  <?php echo e($page['mainmenu_vehicle'] ?? ''  ?: $page['mainmenu_subscription'] ?? '' ?: $page['mainmenu_intervention'] ?? ''); ?>">
+              <!--multiple menu-->
+              <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false">
+                  <i class="sl-icon-location-pin"></i>
+                  <span class="hide-menu"><?php echo e(cleanLang(__('lang.geolocation'))); ?>
+
+                  </span>
+              </a>
+              <ul aria-expanded="false" class="collapse">
+                <li class="sidenav-submenu <?php echo e($page['submenu_vehicle'] ?? ''); ?>" id="submenu_vehicle">
+
+                      <a href="<?php echo e(_url('/geolocation/vehicles')); ?>"
+                          class="<?php echo e($page['submenu_vehicle'] ?? ''); ?>"><?php echo e(cleanLang(__('lang.vehicle'))); ?></a>
+                  </li>
+                  <li class="sidenav-submenu <?php echo e($page['submenu_subscription'] ?? ''); ?>"
+                      id="submenu_subscription">
+                      <a href="<?php echo e(_url('/geolocation/subscriptions')); ?>"
+                          class="<?php echo e($page['submenu_subscription'] ?? ''); ?>"><?php echo e(cleanLang(__('lang.subscription'))); ?></a>
+                  </li>
+                  <li class="sidenav-submenu <?php echo e($page['submenu_intervention'] ?? ''); ?>"
+                  id="submenu_intervention">
+                  <a href="<?php echo e(_url('/geolocation/interventions')); ?>"
+                      class="<?php echo e($page['submenu_intervention'] ?? ''); ?>"><?php echo e(cleanLang(__('lang.intervention'))); ?></a>
+              </li>
+              </ul>
+          </li>
+                 <?php endif; ?>
+
+
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

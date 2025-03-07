@@ -22,5 +22,6 @@
             data-action-ajax-loading-target="commonModalBody">
             <i class="ti-plus"></i>
         </button>
+       
     </div>
 </div><?php /**PATH C:\xampp\htdocs\application\resources\views/landlord/customers/actions/page-actions.blade.php ENDPATH**/ ?>

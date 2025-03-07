@@ -522,6 +522,17 @@ Route::group(['prefix' => 'proposals'], function () {
     Route::get("/{proposal}/pinning", "Proposals@togglePinning")->where('proposal', '[0-9]+');
 });
 
+//Geolocation
+//Route::resource('geolocation', 'Geolocation');
+// Définition des routes personnalisées sous le préfixe 'geolocation'
+Route::group(['prefix' => 'geolocation'], function () {
+    // Route pour la page 'vehicle'
+    Route::get('/vehicles', 'Vehicle@index')->name('geolocation.vehicle');
+    Route::get('/subscriptions', 'GeoSubscription@index')->name('geolocation.subscription');
+    Route::get('/interventions', 'Intervention@index')->name('geolocation.intervention');
+
+
+});
 //CONTRACTS
 Route::resource('contracts', 'Contracts');
 Route::group(['prefix' => 'contracts'], function () {
